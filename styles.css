@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+section {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    color: #4CAF50;
+}
+
+.list_title {
+    font-weight: bold ;
+}
+
+
+/********** Add this style for the two-column layout ***********/
+.skills-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill, .education {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 0.5rem;
+}
+
+.skill-key {
+    min-width: 65%;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.skill-value {
+    min-width: 30%;
+    justify-content: flex-start;
+    align-self: flex-end;
+}
+
+
+.education-key {
+    min-width: 65%;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.education-value {
+    min-width: 30%;
+    align-self: flex-start;
+    justify-content: flex-start;
+    /* text-align: left; */
+}
