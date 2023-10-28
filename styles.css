@@ -14,6 +14,16 @@ header {
     padding: 1rem;
 }
 
+.fa-linkedin-square{
+    color: rgba(18, 73, 190, 0.76);
+    padding-left:-5px ;
+}
+.fa-github{
+    color: rgba(80, 83, 88, 0.76);
+}
+
+
+
 section {
     display: flexbox;
     width: 70%;
@@ -31,18 +41,22 @@ a {
     color: #4CAF50;
     text-decoration: none;
     padding: 10px 10px;
-    border-radius:5px;
+}
+
+span a{
+    font-weight: normal ;
 }
 
 a:hover{
+    align-self:last baseline ;
     min-width: 45px;
     height: 20px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+    font: .98em/.4 "Fira Sans", sans-serif;
     background: rgba(63, 192, 142, 0.4);
     color: #070101;
     box-shadow: 3px 4px 0px 0px #1564ad;
-    transition: ease 1500ms all;
-    border-radius: 15px;
+    transition: ease 800ms all;
+    border-radius: 12px;
     cursor:pointer ;
     text-shadow: rgb(82, 142, 204) 0px 1px 0px;
 }
@@ -124,12 +138,12 @@ a:hover{
 
 
 
-.job ul, .curricular ul {
+.job ul, .curricular ul, .interests ul {
     margin-top: 10px;
     padding-left: 20px;
 }
 
-.job ul li, .curricular ul li{
+.job ul li, .curricular ul li, .interests ul li{
     list-style-type: disc;
     margin-bottom: 5px;
 }
