@@ -1,8 +1,12 @@
+@import "formStyles.css";
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"); */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    
+    font-size:small;
 }
 
 header {
@@ -12,6 +16,7 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
+    
 }
 
 .fa-linkedin-square{
@@ -21,8 +26,18 @@ header {
 .fa-github{
     color: rgba(80, 83, 88, 0.76);
 }
+.visitor-count{
+    display: flex;
+    direction: inline;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    /* font-size:xX-small ; */
+}
 
-
+.visitor-count span{
+    color: rgb(142 191 173); 
+}
 
 section {
     display: flexbox;
@@ -47,7 +62,7 @@ span a{
     font-weight: normal ;
 }
 
-a:hover{
+span > a:hover, p > a:hover{
     align-self:last baseline ;
     min-width: 45px;
     height: 20px;
@@ -155,9 +170,29 @@ a:hover{
     background: linear-gradient(0deg, rgba(136,203,171,.8) 0%, rgba(0,13,60,1) 100%);
     padding: 3em;
     color: #fff;
+    /* position: relative;
+    bottom: 0%;
+    width: 100%; */
 }
 
 .page__footer p{
     color: #fff;
     text-align: center;
+}
+
+
+
+/* Medium Screens */
+/* Use the keyword 'and' to build a complex media query that evaluates both a min and max */
+@media only screen and (min-width: 600px) and (max-width:1000px) {
+    body {
+        font-size:medium
+    }
+}
+
+/* Lager Screens */
+@media (min-width:1001px){
+    body {
+        font-size:large
+    }
 }
