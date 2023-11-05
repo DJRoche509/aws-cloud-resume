@@ -1,0 +1,144 @@
+:root{
+    --input_width: 580px;    
+    --input-border-style: rgb(133, 133, 133, .4 );
+}
+
+/* Styles for active NavTabs */
+.nav-tabs {
+    display: flex;
+    /* background-color: #025f5c; */
+}
+
+.nav-item.active .nav-link {
+    color: #fff;
+    background-color: #025f5c;
+    border-top-left-radius: 9px;
+    border-top-right-radius:9px;
+    border: 3px solid #adb4b4;
+}
+
+/* Styles for content sections */
+.resume-section,
+.contact-section {
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+#contact-form{
+    max-width:600px;
+    min-height: 600px;
+    /* box-shadow: inset .5px 1px 2px 1px gainsboro; */
+    margin: 25px 20px 25px;  /*top, right, bottom, left*/
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 45px;
+} 
+label{
+    font-size: 1em;
+}
+
+input{
+    
+    border: 1px solid var(--input-border-style);
+    margin-top:8px;
+}
+
+input:hover{
+    border: 1px solid rgb(142 191 173) ;
+}
+
+input:focus{
+    /* background-color:rgba(75, 123, 227, 0.2) ; */
+    outline:none;
+}
+
+#name{
+    width:98%;
+    height: 5vh;
+    margin-bottom: 25px;
+}
+
+.names_section div{
+    display: inline-block;
+    padding-right: 8px;
+    width: 49%;
+}
+
+
+.names_section{
+    display: block ;
+    width: 100%;
+    /* margin-bottom: 20px; */
+}
+
+.container div{
+    margin-bottom: 10px;
+}
+
+#email{
+    width: 98%;
+    height: 5vh;
+    margin-bottom: 35px;
+}
+
+#message{
+    width: 98%;
+    min-height:220px;
+    margin-top:8px;
+    border: 1px solid var(--input-border-style);
+    margin-bottom: 35px;
+}
+#message:hover{
+    border: 1px solid rgb(142 191 173) ;
+}
+
+#message:focus{
+    /* background-color:rgba(149, 178, 239, 0.2) ; */
+    outline:none;
+}
+
+::placeholder{
+    opacity: .4;
+}
+
+button{
+    border-style: none;
+    border-radius: 25px;
+    background-color: darkslategray;
+    width: 70px;
+    height: 25px;
+    position: relative;
+    left: 45%;
+    color: white;
+}
+button:hover{
+    /* box-shadow: inset 1px 2px 3px 2px   #323730 ;
+    border-style: none; */
+    /* align-self:last baseline ; */
+    min-width: 45px;
+    height: 20px;
+    font: .98em/.4 "Fira Sans", sans-serif;
+    background: rgba(63, 192, 142, 0.4);
+    color: #070101;
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    transition: ease 1000ms all;
+    border-radius: 12px;
+    cursor:pointer ;
+    text-shadow: rgb(82, 142, 204) 0px 1px 0px;
+}
+
+.lower_div_centered{
+    position: relative;
+    left: 45%;
+    padding-right: 15px;    
+}
+
+i{
+    color: rgb(81, 81, 106);
+    padding-right: 5px; 
+}
