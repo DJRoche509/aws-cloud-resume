@@ -42,4 +42,4 @@ contactTab.addEventListener("click", function (event) {
 });
 
 // Initial state: Resume tab is active
-toggleTabs(url_for("resume"));
+toggleTabs("resume");
