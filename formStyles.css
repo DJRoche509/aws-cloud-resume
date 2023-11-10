@@ -57,8 +57,8 @@ input:focus{
     outline:none;
 }
 
-#name{
-    width:98%;
+#name, #phone{
+    width:60%;
     height: 5vh;
     margin-bottom: 25px;
 }
@@ -81,7 +81,7 @@ input:focus{
 }
 
 #email{
-    width: 98%;
+    width: 60%;
     height: 5vh;
     margin-bottom: 35px;
 }
