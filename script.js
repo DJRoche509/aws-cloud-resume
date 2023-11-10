@@ -1,6 +1,9 @@
 // Visitor Counter
-function updateCounter() {
-    
+const counter = document.getElementById("visitor-count");
+async function updateCounter() {
+    let response = await fetch("https://bd3nqxp3kyfxqqxehujwnkdjym0wfsgw.lambda-url.us-east-2.on.aws/");
+    let data = await response.json();
+    counter.innerHTML = `${data}`;
 }
 
 // Contact Form Submission
@@ -43,3 +46,5 @@ contactTab.addEventListener("click", function (event) {
 
 // Initial state: Resume tab is active
 toggleTabs("resume");
+
+updateCounter();
