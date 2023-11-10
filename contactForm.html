@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="styles.css">
         
         <!----------------------------CLOUDFARE STYLESHEET -------------------------->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
         <title>Junior David Roche - Resume</title>
@@ -44,8 +44,8 @@
                 <p> Minneapolis, MN 55430</p>
                 <p>Email : davjroche@gmail.com</p>
                 <p>Cell : (240) 606-6326</p>
-                <p><a href="https://www.linkedin.com/in/junior-david-roche/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i> &nbsp;LinkedIn</a></p>
-                <p><a href="https://github.com/DJRoche509" target="_blank"><i class="fa fa-github fa-2x"></i> &nbsp;GitHub</a></p>
+                <p><a href="https://www.linkedin.com/in/junior-david-roche/" target="_blank"><i class="fab fa-linkedin-square fa-2x"></i> &nbsp;LinkedIn</a></p>
+                <p><a href="https://github.com/DJRoche509" target="_blank"><i class="fab fa-github fa-2x"></i> &nbsp;GitHub</a></p>
             </section>
             
 
@@ -215,12 +215,16 @@
 
         <!----------------------------CONTACT FORM CONTENT -------------------------->
         <!----------------------------CONTACT FORM SECTION -------------------------->
-        <div id="contact-section" class=" contact-section">
+        <div id="contact-section" class=" contact-section" >
             <!-- ... existing contact details ... -->
-            <form id="contact-form">
+            <form id="contact-form" method="post">
                 <div>
                     <i class="far fa-user-circle fa-xl"> </i> &nbsp;<label for="name">Name:</label>
                     <input type="text" id="name" name="name" required placeholder="   First and Last Name"><br>
+                </div>
+                <div>
+                    <i class="fas fa-mobile-alt fa-xl"> </i> &nbsp;<label for="name">Phone:</label>
+                    <input type="phone" id="phone" name="phone" required placeholder="   Enter your phone number"><br>
                 </div>
                 <div>
                     <i class="fas fa-at fa-xl"></i> &nbsp;<label for="email">Email:</label>
@@ -228,7 +232,7 @@
                 </div>
                 <div>    
                     <i class="far fa-comment-alt fa-xl"></i> <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" required placeholder="   Type here ..."></textarea><br>
+                    <textarea id="message" name="message" required placeholder="   Type message here ..."></textarea><br>
                 </div>
                 <div><i class="lower_div_centered far fa-paper-plane fa-xl"></i><button type="submit" value="submit" title="Click to Submit">Send</button></div>
             </form>
