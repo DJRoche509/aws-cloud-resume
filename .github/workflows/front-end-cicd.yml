@@ -1,14 +1,14 @@
 name : CICD / Upload website to S3
 
-on: 
-    push:
-        branches:
-            - main
-        
+on:  
+    push:    
+        branches:    
+            - main     
+               
 jobs:
     deploy:
         runs-on: ubuntu-latest
-        setps:
+        steps:
         - uses: actions/checkout@master
         - uses: jakejarvis/s3-sync-action@master
         with:
