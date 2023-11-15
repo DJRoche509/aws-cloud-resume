@@ -142,3 +142,8 @@ i{
     color: rgb(81, 81, 106);
     padding-right: 5px; 
 }
+
+#contact-form div .fa {
+    font-size: 24px;
+    font-weight: bolder;
+}
