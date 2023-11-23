@@ -58,6 +58,41 @@ function sendMessage() {
 }
 
 
+/* Dynamic changing text that cycles thru the array of job titles */
+const dynamicText = document.getElementById("dynamic-text");
+const phrases = [
+    "I am a Cloud Engineer",
+    "I am a Software Engineer",
+    "I am a DevOps Engineer",
+    "I am a Data Analyst",
+    "I am a Machine Learning Enthusiast"
+];
+let currentPhrase = 0;
+let currentCharacter = 0;
+
+function typePhrase() {
+    if (currentCharacter < phrases[currentPhrase].length) {
+        dynamicText.textContent += phrases[currentPhrase].charAt(currentCharacter);
+        currentCharacter++;
+        setTimeout(typePhrase, 100);
+    } else {
+        setTimeout(deletePhrase, 1000);
+    }
+}
+
+function deletePhrase() {
+    if (currentCharacter > 0) {
+        dynamicText.textContent = phrases[currentPhrase].substring(0, currentCharacter - 1);
+        currentCharacter--;
+        setTimeout(deletePhrase, 100);
+    } else {
+        currentPhrase = (currentPhrase + 1) % phrases.length;
+        setTimeout(typePhrase, 200);
+    }
+}
+
+
+
 
 // Get the Resume and Contact me tabs
 const resumeTab = document.getElementById("resume-tab");
@@ -100,5 +135,8 @@ submit.addEventListener('submit', e => {
 
 // Initial state: Resume tab is active
 toggleTabs("resume");
+
+// Invoke typePhrase() function
+typePhrase();
 
 // updateCounter();
