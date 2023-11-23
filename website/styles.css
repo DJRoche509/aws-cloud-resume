@@ -16,9 +16,29 @@ header {
     background: linear-gradient(0deg, rgba(136,203,171,.8) 0%, rgba(0,13,60,1) 100%);
     color: white;
     text-align: center;
-    padding: 1rem;
-    
+    padding: 1rem;    
 }
+
+/**************** ADD TYPING EFFECT  *****************/
+#dynamic-text {
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* Typing keyframes */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Cursor animations */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+}
+
 
 .fa-linkedin-square{
     color: rgba(18, 73, 190, 0.76);
