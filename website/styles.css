@@ -1,11 +1,13 @@
 @import "formStyles.css";
 
 body {
+    background-color: #f3f3f3; /* Light%20grey background */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     font-size:small;
-    background: url('https://images.unsplash.com/photo-1446716336919-df838e44ce7b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjE0fHxwb3J0Zm9saW8lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww') center center/cover ;
+    background: url('https://images.unsplash.com/photo-1446716336919-df838e44ce7b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjE0fHxwb3J0Zm9saW8lMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww') no-repeat center center fixed ;
+    background-size: cover;
 }
 
 header {
@@ -188,18 +190,23 @@ span > a:hover, p > a:hover{
 /* Use the keyword 'and' to build a complex media query that evaluates both a min and max */
 @media only screen and (min-width: 600px) and (max-width:1000px) {
     body {
-        font-size:medium
+        font-size:smaller;
+        background-size: cover;
+    }
+    
+    section{
+        width: 65%;
     }
 }
 
 /* Lager Screens */
 @media (min-width:1001px){
     body {
-        font-size:large
+        font-size:smaller;
     }
 
     section{
-        width: 50%;
+        width: 65%;
     }
 
 }
