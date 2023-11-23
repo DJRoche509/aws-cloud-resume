@@ -7,6 +7,10 @@
         <!----------------------------CUSTOM STYLESHEET -------------------------->
         <link rel="stylesheet" href="styles.css">
         
+        
+        <!---------------------------------------CUSTOM JS SCRIPT ------------------------------------>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        
         <title>Junior David Roche - Resume</title>
     </head>
     <body>
@@ -213,7 +217,7 @@
         <!----------------------------CONTACT FORM SECTION -------------------------->
         <div id="contact-section" class=" contact-section" >
             <!-- ... existing contact details ... -->
-            <form id="contact-form" method="post">
+            <form id="contact-form" class="contactform" method="post">
                 <div>
                     <i class="far fa-user-circle fa-xl"> </i> &nbsp;<label for="name">Name:</label>
                     <input type="text" id="name" name="name" required placeholder="   First and Last Name"><br>
@@ -230,7 +234,7 @@
                     <i class="far fa-comment-alt fa-xl"></i> <label for="message">Message:</label><br>
                     <textarea id="message" name="message" required placeholder="   Type message here ..."></textarea><br>
                 </div>
-                <div><i class="lower_div_centered far fa-paper-plane fa-xl"></i><button type="submit" value="submit" title="Click to Submit">Send</button></div>
+                <div><i class="lower_div_centered far fa-paper-plane-o fa-xl"></i><button type="submit" value="submit" title="Click to Submit">Send</button></div>
             </form>
 
         </div>
