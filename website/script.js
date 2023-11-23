@@ -69,28 +69,41 @@ const phrases = [
 ];
 let currentPhrase = 0;
 let currentCharacter = 0;
+let isDeleting = false;
 
-function typePhrase() {
-    if (currentCharacter < phrases[currentPhrase].length) {
-        dynamicText.textContent += phrases[currentPhrase].charAt(currentCharacter);
-        currentCharacter++;
-        setTimeout(typePhrase, 100);
+function typeEffect() {
+    const current = phrases[currentPhrase];
+    const next = phrases[(currentPhrase + 1) % phrases.length];
+    const commonLength = getCommonPrefixLength(current, next);
+
+    if (!isDeleting) {
+        if (currentCharacter < current.length) {
+            dynamicText.textContent += current.charAt(currentCharacter);
+            currentCharacter++;
+            setTimeout(typeEffect, 200); // Typing speed
+        } else {
+            setTimeout(() => { isDeleting = true; typeEffect(); }, 2000); // Pause before deleting
+        }
     } else {
-        setTimeout(deletePhrase, 1000);
+        if (currentCharacter > commonLength) {
+            dynamicText.textContent = current.substring(0, currentCharacter - 1);
+            currentCharacter--;
+            setTimeout(typeEffect, 100); // Deleting speed
+        } else {
+            isDeleting = false;
+            currentPhrase = (currentPhrase + 1) % phrases.length;
+            setTimeout(typeEffect, 200); // Delay before typing next phrase
+        }
     }
 }
 
-function deletePhrase() {
-    if (currentCharacter > 0) {
-        dynamicText.textContent = phrases[currentPhrase].substring(0, currentCharacter - 1);
-        currentCharacter--;
-        setTimeout(deletePhrase, 100);
-    } else {
-        currentPhrase = (currentPhrase + 1) % phrases.length;
-        setTimeout(typePhrase, 200);
+function getCommonPrefixLength(str1, str2) {
+    let i = 0;
+    while (i < str1.length && i < str2.length && str1[i] === str2[i]) {
+        i++;
     }
+    return i;
 }
-
 
 
 
@@ -136,7 +149,7 @@ submit.addEventListener('submit', e => {
 // Initial state: Resume tab is active
 toggleTabs("resume");
 
-// Invoke typePhrase() function
-typePhrase();
+// Invoke updatePhrase() function
+typeEffect();
 
 // updateCounter();
