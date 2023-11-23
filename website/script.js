@@ -1,10 +1,10 @@
 // Visitor Counter
-// const counter = document.getElementById("visitor-count");
-// async function updateCounter() {
-//     let response = await fetch("https://bd3nqxp3kyfxqqxehujwnkdjym0wfsgw.lambda-url.us-east-2.on.aws/"); //("https://in3e4ogyqefn6n4cik3mwpuxb40jglxp.lambda-url.us-east-2.on.aws/") with Terraform ;
-//     let data = await response.json();
-//     counter.innerHTML = `${data}`;
-// }
+const counter = document.getElementById("visitor-count");
+async function updateCounter() {
+    let response = await fetch("https://bd3nqxp3kyfxqqxehujwnkdjym0wfsgw.lambda-url.us-east-2.on.aws/"); //("https://in3e4ogyqefn6n4cik3mwpuxb40jglxp.lambda-url.us-east-2.on.aws/") with Terraform ;
+    let data = await response.json();
+    counter.innerHTML = `${data}`;
+}
 
 // Contact Form Submission
 const fullName = document.getElementById('name');
@@ -152,4 +152,4 @@ toggleTabs("resume");
 // Invoke updatePhrase() function
 typeEffect();
 
-// updateCounter();
+updateCounter();
