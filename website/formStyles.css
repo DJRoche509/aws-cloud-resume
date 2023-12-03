@@ -32,7 +32,7 @@
     /* box-shadow: inset .5px 1px 2px 1px gainsboro; */
     margin: 25px 20px 25px;  /*top, right, bottom, left*/
     padding: 25px;
-    border: 1px solid #ccc;
+    border: 1px solid transparent;
     border-radius: 5px;
     margin-right: auto;
     margin-left: auto;
@@ -160,7 +160,8 @@ button:hover{
 .lower_div_centered{
     position: relative;
     left: 39%;
-    padding-right: 15px;    
+    padding-right: 15px;  
+    color: rgb(157, 159, 160); 
 }
 
 i{
