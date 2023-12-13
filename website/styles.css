@@ -205,6 +205,35 @@ span > a:hover, p > a:hover{
 }
 
 
+.portfolio {
+    padding: 40px 60px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.project {
+    margin-bottom: 7%;
+}
+
+.project img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 15px;
+    transition: transform .2s ease; /* Animation*/
+}
+
+.project img:hover {
+    transform: scale(1.2);
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+
+
 
 /* Medium Screens */
 /* Use the keyword 'and' to build a complex media query that evaluates both a min and max */
