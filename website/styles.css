@@ -208,7 +208,7 @@ span > a:hover, p > a:hover{
 .portfolio {
     padding: 40px 60px;
     margin-top: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid none;
     background-color: #f9f9f9;
 }
 
@@ -221,11 +221,12 @@ span > a:hover, p > a:hover{
     height: 100px;
     float: left;
     margin-right: 15px;
+    border-radius: 11px;
     transition: transform .2s ease; /* Animation*/
 }
 
 .project img:hover {
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 
 .project h3 {
