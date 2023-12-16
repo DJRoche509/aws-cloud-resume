@@ -79,7 +79,8 @@ ul {
 }
 
 a {
-    color: #4CAF50;
+    color: #e9a92f;
+    text-shadow: #070707 1px 2px 1px;
     text-decoration: none;
     padding: 10px 10px;
 }
