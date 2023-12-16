@@ -61,11 +61,12 @@ function sendMessage() {
 /* Dynamic changing text that cycles thru the array of job titles */
 const dynamicText = document.getElementById("dynamic-text");
 const phrases = [
-    "I am a Cloud Engineer",
-    "I am a Software Engineer",
-    "I am a DevOps Engineer",
-    "I am a Data Analyst",
-    "I am a Machine Learning Enthusiast"
+    "Cloud Engineer",
+    "Cloud Architect",
+    "Software Engineer",
+    "DevOps Engineer",
+    "Data Analyst",
+    "Machine Learning Enthusiast"
 ];
 let currentPhrase = 0;
 let currentCharacter = 0;
@@ -80,15 +81,15 @@ function typeEffect() {
         if (currentCharacter < current.length) {
             dynamicText.textContent += current.charAt(currentCharacter);
             currentCharacter++;
-            setTimeout(typeEffect, 200); // Typing speed
+            setTimeout(typeEffect, 80); // Typing speed
         } else {
-            setTimeout(() => { isDeleting = true; typeEffect(); }, 2000); // Pause before deleting
+            setTimeout(() => { isDeleting = true; typeEffect(); }, 900); // Pause before deleting
         }
     } else {
         if (currentCharacter > commonLength) {
-            dynamicText.textContent = current.substring(0, currentCharacter - 1);
+            dynamicText.textContent = "I am a "+ current.substring(0, currentCharacter - 1);
             currentCharacter--;
-            setTimeout(typeEffect, 100); // Deleting speed
+            setTimeout(typeEffect, 80); // Deleting speed
         } else {
             isDeleting = false;
             currentPhrase = (currentPhrase + 1) % phrases.length;
@@ -110,23 +111,38 @@ function getCommonPrefixLength(str1, str2) {
 // Get the Resume and Contact me tabs
 const resumeTab = document.getElementById("resume-tab");
 const contactTab = document.getElementById("contact-tab");
+const portfolioTab = document.getElementById("portfolio-tab");
 
 // Get the content sections
 const resumeSection = document.getElementById("resume-section");
 const contactSection = document.getElementById("contact-section");
+const portfolioSection = document.getElementById("portfolio-section");
 
 // Toggle function to switch between Resume and Contact me tabs
 function toggleTabs(selectedTab) {
     if (selectedTab === "resume") {
         resumeTab.classList.add("active");
         contactTab.classList.remove("active");
+        portfolioTab.classList.remove("active");
         resumeSection.style.display = "block";
         contactSection.style.display = "none";
+        portfolioSection.style.display = "none";
     } else if (selectedTab === "contact") {
         contactTab.classList.add("active");
         resumeTab.classList.remove("active");
+        portfolioTab.classList.remove("active");
         contactSection.style.display = "block";
         resumeSection.style.display = "none";
+        portfolioSection.style.display = "none";
+    } else if (selectedTab === "portfolio") {
+        portfolioTab.classList.add("active");
+        resumeTab.classList.remove("active");
+        contactTab.classList.remove("active");
+        // remove active class from other tabs
+        portfolioSection.style.display = "block";
+        contactSection.style.display = "none";
+        resumeSection.style.display = "none";
+        // set display none for other sections
     }
 }
 
@@ -139,6 +155,12 @@ resumeTab.addEventListener("click", function (e) {
 contactTab.addEventListener("click", function (event) {
     event.preventDefault()  // Prevent default behavior of anchor tag
     toggleTabs("contact");
+});
+
+// Add event listener for Portfolio tab
+portfolioTab.addEventListener("click", function (e) {
+    e.preventDefault();
+    toggleTabs("portfolio");
 });
 
 submit.addEventListener('submit', e => {
