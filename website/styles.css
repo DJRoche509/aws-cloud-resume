@@ -1,10 +1,13 @@
 @import "formStyles.css";
 
 body {
-    background-color: #f3f3f3; /* Light%20grey background */
-    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    background-color: #f3f3f3; /* Light%20grey background */
+    font-family: Arial, sans-serif;
     font-size:small;
     text-shadow: 0 0 darkblue;
     background: url('./images/resumeBac.webp') no-repeat center center fixed ;
@@ -193,14 +196,14 @@ span > a:hover, p > a:hover, .project-details a:hover{
 
 /* Footer Styles */
 .page__footer {
-    background: rgb(136,203,171);
+    /* background: rgb(136,203,171); */
     /* background: linear-gradient(0deg, rgba(136,203,171,.8) 0%, rgba(0,13,60,1) 100%); */
     padding: 3em;
     color: #fff;
     background-color: #070707;
-    /* position: relative;
-    bottom: 0%;
-    width: 100%; */
+    margin-top: auto;
+    width: auto;
+    height: auto;
 }
 
 .page__footer p{
@@ -208,11 +211,13 @@ span > a:hover, p > a:hover, .project-details a:hover{
     text-align: center;
 }
 
+h2{
+    margin: 0px auto 10px 10px;
+}
 
 .portfolio {
     padding: 40px 27px;
     margin:40px auto 20px;
-    border: 1px solid none;
     /* background-color: #f9f9f9; */
 }
 
@@ -252,7 +257,9 @@ span > a:hover, p > a:hover, .project-details a:hover{
     margin-top: 0;
 }
 
-
+.project-details .full-description {
+    display: none;
+}
 
 
 /* Medium Screens */
@@ -289,6 +296,6 @@ span > a:hover, p > a:hover, .project-details a:hover{
 
     .project-details{
         width: 65%;
-        padding: 1% 25% 0%;
+        padding: .2% 25% 0%;
     }
 }
