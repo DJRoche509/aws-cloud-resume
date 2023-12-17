@@ -57,12 +57,12 @@ header {
     justify-content: center;
     align-items: center;
     column-gap: 10px;
-    /* font-size:xX-small ; */
 }
 
 .visitor-count span{
-    color: rgb(112 176 202); 
-    text-shadow: 1px 3px 2px rgb(5, 60, 124);
+    color: rgb(4, 4, 41);
+    text-shadow: 1px 2px 3px rgb(251 188 61);
+    font-weight:bolder;
 }
 
 section {
