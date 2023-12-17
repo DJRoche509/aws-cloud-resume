@@ -1,7 +1,7 @@
 // Visitor Counter
 const counter = document.getElementById("visitor-count");
 async function updateCounter() {
-    let responsee = await fetch("https://bd3nqxp3kyfxqqxehujwnkdjym0wfsgw.lambda-url.us-east-2.on.aws/"); //("https://in3e4ogyqefn6n4cik3mwpuxb40jglxp.lambda-url.us-east-2.on.aws/") with Terraform ;
+    let response = await fetch("https://bd3nqxp3kyfxqqxehujwnkdjym0wfsgw.lambda-url.us-east-2.on.aws/"); //("https://in3e4ogyqefn6n4cik3mwpuxb40jglxp.lambda-url.us-east-2.on.aws/") with Terraform ;
     let data = await response.json();
     counter.innerHTML = `${data}`;
 }
@@ -36,9 +36,6 @@ function sendMessage() {
         <b>Message: <br> ${message.value}
         <br>
     `
-    console.log(fullName.value);
-    console.log(email.value, typeof(email.value));
-
     // Email Code Here with SmtpJS
     Email.send({
         SecureToken: "81349cd6-892b-4f41-b056-a0eb87d613fd",
@@ -240,19 +237,51 @@ function createProjectElement(project) {
     projectElement.appendChild(thumbnail);
     projectElement.appendChild(details);
 
-    
-    // Show full description on hover
-    projectElement.addEventListener(("touchstart","mouseenter"), () => {
-        truncatedDesc.style.display = "none";
-        fullDesc.style.display = "block";
-    });
 
-    // Hide full description on mouse leave
-    projectElement.addEventListener("mouseleave", () => {
-        setTimeout(() => {
+    // Add a flag to track whether the description is expanded or collapsed
+    let isDescriptionExpanded = false;
+    let timer;
+
+     // Toggle full description on double-click
+    projectElement.addEventListener("click", () => {
+        if (isDescriptionExpanded) {
             truncatedDesc.style.display = "block";
             fullDesc.style.display = "none";
-        }, 20000);        
+        } else {
+            truncatedDesc.style.display = "none";
+            fullDesc.style.display = "block";
+         }
+        isDescriptionExpanded = !isDescriptionExpanded;
+        resetTimer();
+    });
+
+    // Show truncated description on hover
+    projectElement.addEventListener("mouseenter", () => {
+        if (!isDescriptionExpanded) {
+            truncatedDesc.style.display = "none";
+            fullDesc.style.display = "block";
+            isDescriptionExpanded = true;
+        }
+        resetTimer();
+    });
+    
+    // Hide full description on mouse leave after a certain duration
+    function startTimer() {
+        timer = setTimeout(() => {
+            truncatedDesc.style.display = "block";
+            fullDesc.style.display = "none";
+            isDescriptionExpanded = false;
+        }, 15000);
+    }
+
+    function resetTimer() {
+        clearTimeout(timer);
+        startTimer();
+    }
+
+    // Add event listener for mouse leave
+    projectElement.addEventListener("mouseleave", () => {
+        resetTimer();
     });
 
     return projectElement;
