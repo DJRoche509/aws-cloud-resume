@@ -1,6 +1,7 @@
 :root{
     --input_width: 580px;    
     --input-border-style: rgb(133, 133, 133, .4 );
+    --icon-color: rgb(119 168 190);
 }
 
 /* Styles for active NavTabs */
@@ -161,11 +162,11 @@ button:hover{
     position: relative;
     left: 39%;
     padding-right: 15px;  
-    color: rgb(157, 159, 160); 
+    color: var(--icon-color); 
 }
 
 i{
-    color: rgb(81, 81, 106);
+    color:var(--icon-color) ;
     padding-right: 5px; 
 }
 
