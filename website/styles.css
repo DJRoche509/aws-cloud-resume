@@ -10,7 +10,7 @@ body {
     font-family: Arial, sans-serif;
     font-size:small;
     text-shadow: 0 0 darkblue;
-    background: url('./images/resumeBac.webp') no-repeat center center fixed ;
+    background: url('./images/resumeBac2.png') no-repeat center center fixed ;
     background-size: cover;
 }
 
@@ -97,7 +97,7 @@ span > a:hover, p > a:hover, .project-details a:hover{
     min-width: 45px;
     height: 20px;
     font: .98em/.4 "Fira Sans", sans-serif;
-    background: rgba(63, 192, 142, 0.4);
+    background: rgba(243, 244, 245, 0.4);
     color: #070101;
     box-shadow: 3px 4px 0px 0px #1564ad;
     transition: ease 800ms all;
@@ -260,6 +260,20 @@ h2{
 .project-details .full-description {
     display: none;
 }
+
+.iconbutton{
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    cursor: pointer;
+  }
 
 
 /* Medium Screens */

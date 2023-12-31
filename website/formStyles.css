@@ -149,7 +149,7 @@ button:hover{
     min-width: 45px;
     height: 20px;
     font: .98em/.4 "Fira Sans", sans-serif;
-    background: rgba(63, 192, 142, 0.4);
+    background: rgba(243, 244, 245, 0.4);
     color: #070101;
     box-shadow: 3px 4px 0px 0px #1564ad;
     transition: ease 1000ms all;
