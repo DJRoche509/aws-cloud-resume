@@ -177,7 +177,7 @@ const projects = [
     {
         title: "2015-US-Flight-Delays-and-Cancellations-Analysis",
         description: "This project explores flight delays and cancellations in the United States for the year 2015. The main story conveyed through the visualization is an analysis of various factors contributing to flight delays and cancellations. The visualization allows viewers to understand the distribution of delays and cancellations across airlines, the reasons for cancellations, and how these factors vary across different months and days of the week.",
-        githubLink: "https://github.com/DJRoche509/Pre-trained-Image-Classifier-to-Identify-Dog-Breeds",
+        githubLink: "https://github.com/DJRoche509/2015-US-Flight-Delays-and-Cancellations-Analysis",
         tableauLink: "https://public.tableau.com/views/Flights2015-DelayCancellation/Summary?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
         thumbnail: "./images/2015flightsAnalysis.PNG"
     },
