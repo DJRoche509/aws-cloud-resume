@@ -183,12 +183,12 @@ span > a:hover, p > a:hover, .project-details a:hover{
 
 
 
-.job ul, .curricular ul, .interests ul, .awards ul {
+.job ul, .curricular ul, .interests ul, .achievements ul {
     margin-top: 10px;
     padding-left: 20px;
 }
 
-.job ul li, .curricular ul li, .interests ul li, .awards ul li{
+.job ul li, .curricular ul li, .interests ul li, .achievements ul li{
     list-style-type: disc;
     margin-bottom: 5px;
 }
