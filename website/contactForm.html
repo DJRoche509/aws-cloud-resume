@@ -215,28 +215,30 @@
 
         <!----------------------------CONTACT FORM CONTENT -------------------------->
         <!----------------------------CONTACT FORM SECTION -------------------------->
-        <div id="contact-section" class=" contact-section" >
-            <!-- ... existing contact details ... -->
+        <div id="contact-section" class="contact contact-section">
             <form id="contact-form" class="contactform" method="post">
-                <div>
-                    <i class="far fa-user-circle fa-xl"> </i> &nbsp;<label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required placeholder="   First and Last Name"><br>
+                <div class="form-group">
+                    <label for="name"><i class="fa fa-user-circle"></i> Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="First and Last Name">
                 </div>
-                <div>
-                    <i class="fas fa-mobile-alt fa-xl"> </i> &nbsp;<label for="name">Phone:</label>
-                    <input type="phone" id="phone" name="phone" required placeholder="   Enter your phone number"><br>
+                <div class="form-group">
+                    <label for="phone"><i class="fa fa-tablet"></i> Phone:</label>
+                    <input type="text" id="phone" name="phone" required placeholder="Enter your phone number">
                 </div>
-                <div>
-                    <i class="fas fa-at fa-xl"></i> &nbsp;<label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="   Email address"><br>
+                <div class="form-group">
+                    <label for="email"><i class="fa fa-at"></i> Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Email address">
                 </div>
-                <div>    
-                    <i class="far fa-comment-alt fa-xl"></i> <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" required placeholder="   Type message here ..."></textarea><br>
+                <div class="form-group">
+                    <label for="message"><i class="fa fa-envelope-open-o"></i> Message:</label>
+                    <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
                 </div>
-                <div><i class="lower_div_centered far fa-paper-plane-o fa-xl"></i><button type="submit" value="submit" title="Click to Submit">Send</button></div>
+                <div class="form-group form-btn">
+                    <button type="submit" title="Send Message">
+                        <i class="fa fa-paper-plane"></i> Send
+                    </button>
+                </div>
             </form>
-
         </div>
 
 
