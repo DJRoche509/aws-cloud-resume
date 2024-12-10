@@ -76,6 +76,14 @@ section {
     
 }
 
+.cert_list {
+    margin-bottom: 10px; /* Adds space between lines */
+}
+
+.gap {
+    line-height: 1.5;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
