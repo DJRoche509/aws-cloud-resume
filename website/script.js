@@ -59,7 +59,7 @@ function sendMessage() {
 const dynamicText = document.getElementById("dynamic-text");
 const phrases = [
     "Cloud Engineer",
-    "Cloud Architect",
+    "Cloud Solutions Architect",
     "Software Engineer",
     "DevOps Engineer",
     "Data Analyst",
@@ -194,7 +194,7 @@ function createProjectElement(project) {
     thumbnail.alt = `${project.title} Thumbnail`;
 
     const details = document.createElement("div");
-    details.classList.add("project-details");
+    details.classList.add("project-details","gap2",'bottom_space');
 
     const title = document.createElement("h2");
     title.textContent = project.title;

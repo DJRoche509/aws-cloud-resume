@@ -76,12 +76,15 @@ section {
     
 }
 
-.cert_list {
+.bottom_space {
     margin-bottom: 10px; /* Adds space between lines */
 }
 
 .gap {
     line-height: 1.5;
+}
+.gap2 {
+    line-height: 2;
 }
 
 ul {
