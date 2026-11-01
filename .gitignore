@@ -1,9 +1,13 @@
-# Local .terraform directories
-**/.terraform/*
+# Terraform generated plans
+*.tfplan
 
-# .tfstate files
+# Terraform state files
 *.tfstate
 *.tfstate.*
+.terraform/
+
+# Generated Lambda deployment package
+infra/lambda/func.zip
 
 # Crash log files
 crash.log
